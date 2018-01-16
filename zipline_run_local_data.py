@@ -1,3 +1,14 @@
+data frame looks like :
+	399006
+Date	
+2017-10-09 00:00:00+00:00	1889.84
+2017-10-10 00:00:00+00:00	1917.46
+....
+access symbol price at point
+def handle_data(context, data):
+    print("handle_data : %s"%data.current_dt)
+    print("data current : ", data.current(symbol('399006'), 'price'))
+
 ########################################### simple version ###############################
 import pandas as pd
 import locale
